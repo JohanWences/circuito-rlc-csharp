@@ -39,6 +39,9 @@ namespace CircuitoRLC
             double frecuenciaObtenida = 0;
             double voltajeObtenido = 0;
 
+
+            double X_L;
+            double X_C;
             double Z; // Impedancia
             double I; // Corriente
             double thetha; // angulo de fase
@@ -103,28 +106,67 @@ namespace CircuitoRLC
                     MessageBox.Show("Existen campos vacíos");
                 } else
                 {
-                    reactancia = 2 * Math.PI * frecuenciaObtenida * inductanciaObtenida;
-                    Z = Math.Sqrt(Math.Pow(resistenciaObtenida, 2) + Math.Pow(reactancia, 2)); // Inductancia capacitiva
-                    label8.Text = Z.ToString() + " Ω";
+                    X_L = 2 * Math.PI * frecuenciaObtenida * inductanciaObtenida; // Reactancia inductiva
+                    X_C = 1 / (2 * Math.PI * frecuenciaObtenida * capacitanciaObtenida);
+                    // Cálculo de impedancia
+                    Z = Math.Sqrt(Math.Pow(resistenciaObtenida, 2) + Math.Pow(X_L - X_C, 2));
+                    //reactancia = 2 * Math.PI * frecuenciaObtenida * inductanciaObtenida;
+                    //Z = Math.Sqrt(Math.Pow(resistenciaObtenida, 2) + Math.Pow(reactancia, 2)); // Inductancia capacitiva
+                    label8.Text = "Impedancia obtenida: " + Z.ToString() + " Ω";
                     label9.Text = "";
                     label10.Text = "";
                 }
             }
-            else if (corrienteRadioBtn.Checked)
+            if (corrienteRadioBtn.Checked)
             {
                 if (errors > 0)
                 {
                     MessageBox.Show("Existen campos vacíos");
+                } else
+                {
+                    X_L = 2 * Math.PI * frecuenciaObtenida * inductanciaObtenida; // Reactancia inductiva
+                    X_C = 1 / (2 * Math.PI * frecuenciaObtenida * capacitanciaObtenida);
+                    // Cálculo de impedancia
+                    Z = Math.Sqrt(Math.Pow(resistenciaObtenida, 2) + Math.Pow(X_L - X_C, 2));
+                    I = voltajeObtenido / Z;
+
+                    label8.Text = "Corriente obtenida: " + I.ToString() + " A";
+                    label9.Text = "";
+                    label10.Text = "";
                 }
             }
-            else if (potenciaRadioBtn.Checked)
+            if (potenciaRadioBtn.Checked)
             {
                 if (errors > 0)
                 {
                     MessageBox.Show("Existen campos vacíos");
+                } else
+                {
+                    // Cálculo de reactancias
+                    X_L = 2 * Math.PI * frecuenciaObtenida * inductanciaObtenida; // Reactancia inductiva
+                    X_C = 1 / (2 * Math.PI * frecuenciaObtenida * capacitanciaObtenida); // Reactancia capacitiva
+
+                    // Cálculo de impedancia
+                    Z = Math.Sqrt(Math.Pow(resistenciaObtenida, 2) + Math.Pow(X_L - X_C, 2));
+
+                    // Cálculo de corriente
+                    I = voltajeObtenido / Z;
+
+                    // Cálculo del ángulo de fase (theta)
+                    thetha = Math.Atan((X_L - X_C) / resistenciaObtenida);
+
+                    // Cálculo de las potencias
+                    double S = voltajeObtenido * I; // Potencia aparente
+                    double P = S * Math.Cos(thetha); // Potencia activa
+                    double Q = S * Math.Sin(thetha); // Potencia reactiva
+
+                    // Mostrar resultados
+                    label8.Text = "Potencia Aparente: " + S.ToString("F2") + " VA";
+                    label9.Text = "Potencia Activa: " + P.ToString("F2") + " W";
+                    label10.Text = "Potencia Reactiva: " + Q.ToString("F2") + " VAR";
                 }
             }
-            else
+            if (!potenciaRadioBtn.Checked && !corrienteRadioBtn.Checked && !impetanciaRadioBtn.Checked)
             {
                 MessageBox.Show("Ninguna opción seleccionada.");
             }
