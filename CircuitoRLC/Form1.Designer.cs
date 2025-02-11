@@ -1,6 +1,6 @@
 ﻿namespace CircuitoRLC
 {
-    partial class Form1
+    partial class CircuitoRLCForm
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,13 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btnCalcularImpedancia = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btnCalcularImpedancia
+            // 
+            this.btnCalcularImpedancia.Location = new System.Drawing.Point(224, 345);
+            this.btnCalcularImpedancia.Name = "btnCalcularImpedancia";
+            this.btnCalcularImpedancia.Size = new System.Drawing.Size(175, 23);
+            this.btnCalcularImpedancia.TabIndex = 0;
+            this.btnCalcularImpedancia.Text = "Calcular Impedancia";
+            this.btnCalcularImpedancia.UseVisualStyleBackColor = true;
+            this.btnCalcularImpedancia.Click += new System.EventHandler(this.btnCalcularImpedancia_Click);
+            // 
+            // CircuitoRLCForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(1228, 450);
+            this.Controls.Add(this.btnCalcularImpedancia);
+            this.Name = "CircuitoRLCForm";
+            this.Text = "CircuitoRLC";
+            this.Load += new System.EventHandler(this.CircuitoRLCForm_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnCalcularImpedancia;
     }
 }
 
