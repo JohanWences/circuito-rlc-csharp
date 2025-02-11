@@ -1,0 +1,10 @@
+C:\Users\jhwen\Documentos\OneDrive\Repository\general\academy\UTM\tecnico-superior-universitario\cuatri-5\programación visual\parcial 1\circuito-rlc\CircuitoRLC\bin\Debug\CircuitoRLC.exe.config
+C:\Users\jhwen\Documentos\OneDrive\Repository\general\academy\UTM\tecnico-superior-universitario\cuatri-5\programación visual\parcial 1\circuito-rlc\CircuitoRLC\bin\Debug\CircuitoRLC.exe
+C:\Users\jhwen\Documentos\OneDrive\Repository\general\academy\UTM\tecnico-superior-universitario\cuatri-5\programación visual\parcial 1\circuito-rlc\CircuitoRLC\bin\Debug\CircuitoRLC.pdb
+C:\Users\jhwen\Documentos\OneDrive\Repository\general\academy\UTM\tecnico-superior-universitario\cuatri-5\programación visual\parcial 1\circuito-rlc\CircuitoRLC\obj\Debug\CircuitoRLC.csproj.AssemblyReference.cache
+C:\Users\jhwen\Documentos\OneDrive\Repository\general\academy\UTM\tecnico-superior-universitario\cuatri-5\programación visual\parcial 1\circuito-rlc\CircuitoRLC\obj\Debug\CircuitoRLC.CircuitoRLCForm.resources
+C:\Users\jhwen\Documentos\OneDrive\Repository\general\academy\UTM\tecnico-superior-universitario\cuatri-5\programación visual\parcial 1\circuito-rlc\CircuitoRLC\obj\Debug\CircuitoRLC.Properties.Resources.resources
+C:\Users\jhwen\Documentos\OneDrive\Repository\general\academy\UTM\tecnico-superior-universitario\cuatri-5\programación visual\parcial 1\circuito-rlc\CircuitoRLC\obj\Debug\CircuitoRLC.csproj.GenerateResource.cache
+C:\Users\jhwen\Documentos\OneDrive\Repository\general\academy\UTM\tecnico-superior-universitario\cuatri-5\programación visual\parcial 1\circuito-rlc\CircuitoRLC\obj\Debug\CircuitoRLC.csproj.CoreCompileInputs.cache
+C:\Users\jhwen\Documentos\OneDrive\Repository\general\academy\UTM\tecnico-superior-universitario\cuatri-5\programación visual\parcial 1\circuito-rlc\CircuitoRLC\obj\Debug\CircuitoRLC.exe
+C:\Users\jhwen\Documentos\OneDrive\Repository\general\academy\UTM\tecnico-superior-universitario\cuatri-5\programación visual\parcial 1\circuito-rlc\CircuitoRLC\obj\Debug\CircuitoRLC.pdb
